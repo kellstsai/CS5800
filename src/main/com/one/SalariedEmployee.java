@@ -1,3 +1,5 @@
+package main.com.one; 
+
 class SalariedEmployee extends Employee {
     private int weeklySalary; 
 

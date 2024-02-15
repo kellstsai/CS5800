@@ -1,13 +1,14 @@
-class BaseEmployee extends SalariedEmployee {
+package main.com.one;
 
-    private int baseSalary; 
+public class BaseEmployee extends Employee{
+    
+    private int baseSalary;
 
-    class BaseEmployee(String firstName, String lastName, String SSN, int weeklySalary, int baseSalary) {
-        super(firstName, lastName, SSN); 
+    public BaseEmployee(String firstName, String lastName, String SSN, int baseSalary) {
+        super(firstName, lastName, SSN);
         this.baseSalary = baseSalary; 
     }
 
-    public int getbaseSalary() {
-        return baseSalary; 
-    }
+
+
 }

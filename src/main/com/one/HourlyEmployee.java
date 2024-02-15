@@ -1,3 +1,5 @@
+package main.com.one; 
+
 class HourlyEmployee extends Employee {
 
     private int wage;

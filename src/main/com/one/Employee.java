@@ -1,3 +1,5 @@
+package main.com.one; 
+
 class Employee {
     private String firstName;
     private String lastName;
