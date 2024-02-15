@@ -9,6 +9,9 @@ public class BaseEmployee extends Employee{
         this.baseSalary = baseSalary; 
     }
 
+    public int getbaseSalary() {
+        return baseSalary; 
+    }
 
 
 }
