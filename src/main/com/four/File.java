@@ -14,4 +14,8 @@ public class File {
     public String getFilename() {
         return fileName; 
     }
+
+    public void printFileName() {
+        System.out.println("The file name is: " + getFilename()); 
+    }
 }
