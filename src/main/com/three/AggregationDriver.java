@@ -1,6 +1,6 @@
 package main.com.three;
 
-public class Aggregation {
+public class AggregationDriver {
     public static void main(String[] args) {
         Instructor instructorOne = new Instructor("Nima", "Davarpanah", "3-2636");
         Textbook textbookOne = new Textbook("Clean Code", "Robert C Martin", "Prentice Hall");

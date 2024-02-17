@@ -12,6 +12,4 @@ public class BaseEmployee extends Employee{
     public int getbaseSalary() {
         return baseSalary; 
     }
-
-
 }

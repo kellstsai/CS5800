@@ -1,6 +1,6 @@
 package main.com.one;
 
-public class Driver {
+public class InheritanceDriver {
     public static void main(String[] args) {
         SalariedEmployee Jones = new SalariedEmployee("Joe", "Jones", "111-11-111", 2500); 
         HourlyEmployee Smith = new HourlyEmployee("Stephanie", "Smith", "222-22-2222", 25, 32);

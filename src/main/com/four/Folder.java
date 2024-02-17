@@ -63,19 +63,6 @@ public class Folder {
         files.add(fileName); 
     }
 
-    //method to delete files in folder
-    /*
-    public void deleteFolder(){
-        System.out.println("Folder being deleted: " + folderName); 
-        files.clear();
-
-        for(int i = 0; i < subFolders.size(); i++){
-            subFolders.get(i).deleteFolder();
-        }
-        subFolders.clear();
-    }
-    */
-
     private Folder parent;
 
     public void setParent(Folder parent) {
@@ -103,18 +90,6 @@ public class Folder {
         }
     }
     
-
-    
-    
-
-
-    /* 
-    public void deleteFolder() {
-        System.out.println("Foldering being deleted: " + folderName);
-        files.clear();
-        subFolders.clear();
-    }
-    */
 
     public void deleteFolder() {
         files.clear();

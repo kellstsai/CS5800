@@ -1,6 +1,6 @@
 package main.com.two;
 
-public class Polymorphism {
+public class PolymorphismDriver {
     public static void main(String[] args) {
         Ship[] shipArray = new Ship[3]; 
         shipArray[0] = new Ship("Nina", "1492"); 
