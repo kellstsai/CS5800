@@ -5,6 +5,8 @@ class BaseEmployee {
 
     + BaseEmployee(firstName : String, lastName : String, SSN : String, baseSalary: int)
     + getBaseSalary() : int  
+    + setBaseSalary(baseSalary : int) : void
+    + toString() : String
 }
 
 class CommissionEmployee {
@@ -12,19 +14,26 @@ class CommissionEmployee {
     - grossSales : int
 
     + CommissionEmployee(firstName : String, lastName : String, SSN : String, commissionRate : int, grossSales : int)
-    + getcommissionRate() : int
-    + getgrossSales() : int
+    + getCommissionRate() : int
+    + setCommissionRate(commissionRate : int) : void
+    + getGrossSales() : int
+    + setGrossSales(grossSales : int) : void
+    + toString() : String 
 }
 
 class Employee {
     - firstName : String
     - lastName : String
-    - SSN : String
+    - socialSecurityNumber : String
 
     + Employee(firstName: String, lastName : String, SSN : String)
-    + getfirstName() : String
-    + getlastName() : String
-    + getSSN() : String
+    + getFirstName() : String
+    + getLastName() : String
+    + getSocialSecurityNumber() : String
+    + setFirstName(firstName : String) : void
+    + setLastname(lastName : String) : void 
+    + toString() : String
+
 }
 
 class HourlyEmployee {
@@ -32,8 +41,11 @@ class HourlyEmployee {
     - numberOfHoursWorked : int
 
     + HourlyEmployee(firstName : String, lastName: String, SSN : String, wage : int, numberOfHoursWorked : int)
-    + getwage() : int
-    + getnumberOfHoursWorked() : int 
+    + getWage() : int
+    + setWage(wage : int) : void
+    + getHoursWorked() : int 
+    + setHoursWorked(hoursWorked : int) : void
+    + toString() : String
 }
 
 class SalariedEmployee {
@@ -41,6 +53,8 @@ class SalariedEmployee {
 
     + SalariedEmployee(firstName : String, lastName : String, SSN : String, weeklySalary : int)
     + getweeklySalary() : int 
+    + setWeeklySalary(weeklySalary : int) : void
+    + toString() : String
     }
 
 class InheritanceDriver {

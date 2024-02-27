@@ -1,18 +1,19 @@
 @startuml classDiagramAggregation
 
 class Course{
-    - courseName : String
-    - instructor : Instructor
-    - textbook : Textbook
+    - name : String
+    - instructors : ArrayList<Instructor>
+    - textbook : ArrayList<Textbook> 
 
     + Course(courseName : String, instructor : Instructor, textbook : Textbook)
-    + setCourseName(courseName : String) : void
-    + setInstructor(instructor : Instructor) : void
-    + setTextbook(textbook : Textbook) : void
-    + getCourseName() : String
-    + getInstructor() : Instructor
-    + getTextbook() : Textbook
-    + printCourseInfo() : void 
+    + setName(name : String) : void
+    + setInstructors(instructor : Instructor) : void
+    + setTextbooks(textbook : Textbook) : void
+    + getName() : String
+    + getInstructors() : ArrayList<Instructor>
+    + getTextbooks() : ArrayList<Textbook>
+    + printCourse() : void 
+    + toString() : String
 }
 
 class Instructor{
@@ -27,6 +28,7 @@ class Instructor{
     + getFirstname() : String
     + getLastName() : String
     + getOfficeNumber() : String
+    + toString() : String
 }
 
 class Textbook{
@@ -41,6 +43,7 @@ class Textbook{
     + getTitle() : String
     + getAuthor() : String
     + getPublisher() : String
+    + toString() : String
 }
 
 class AggregationDriver{
