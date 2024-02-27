@@ -1,0 +1,52 @@
+@startuml classDiagramAggregation
+
+class Course{
+    - courseName : String
+    - instructor : Instructor
+    - textbook : Textbook
+
+    + Course(courseName : String, instructor : Instructor, textbook : Textbook)
+    + setCourseName(courseName : String) : void
+    + setInstructor(instructor : Instructor) : void
+    + setTextbook(textbook : Textbook) : void
+    + getCourseName() : String
+    + getInstructor() : Instructor
+    + getTextbook() : Textbook
+    + printCourseInfo() : void 
+}
+
+class Instructor{
+    - firstName : String
+    - lastName : String
+    - officeNumber : String
+
+    + Instructor(firstName : String, lastName : String, officeNumber : String)
+    + setFirstName(firstName : String) : void
+    + setLastName(lastname : String) : void
+    + setOfficeNumber(officeNumber : String) : void
+    + getFirstname() : String
+    + getLastName() : String
+    + getOfficeNumber() : String
+}
+
+class Textbook{
+    - title : String
+    - author : String
+    - publisher : String
+
+    + Textbook(title : String, author : String, publisher : String)
+    + setTitle(title : String) : void
+    + setAuthor(author : String) : void
+    + setPublisher(publisher : String) : void
+    + getTitle() : String
+    + getAuthor() : String
+    + getPublisher() : String
+}
+
+class AggregationDriver{
+
+}
+
+Course o-- Instructor
+Course o-- Textbook
+@enduml

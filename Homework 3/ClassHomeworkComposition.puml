@@ -1,0 +1,45 @@
+@startuml classDiagramComposition
+
+class File{
+    - fileName : String  
+
+    + File(fileName : String)
+    + setFileName(fileName : String) : void 
+    + getFilename() : String  
+    + printFileName() : void 
+}
+
+class Folder{
+    - folderName : String 
+    - files : List<File> 
+    - subFolders : List<Folder> 
+    - parent : Folder
+
+    + Folder(folderName : String)
+    + getAllFolders() : List<Folder>
+    + collectAllFolders(folder : Folder, allFolders : List<Folder>) : void
+    + setFolderName(foldderName : String) : void
+    + getFolderName() : String
+    + setFile(files : List<File>) : void
+    + getFile() : List<File>
+    + setSubFolders(subFolders : List<Folder>) : void
+    + getSubFolders() : List<Folder>
+    + addSubFolder(subFolder : Folder) : void
+    + addFiles(fileName : File) : void
+    + setParent(parent : Folder) : void 
+    + deleteFolderName(folderName : String) : void 
+    + deleteFolder() : void 
+    + printFolder() : void
+    + findFolder(folderName : String) : int
+}
+
+class CompositionDriver{
+
+}
+
+Folder *-- Folder 
+Folder *-- File 
+@enduml 
+
+
+

@@ -1,0 +1,28 @@
+@startuml ObjectDiagramOnePolymorphism
+
+class PolymorphismDriver {
+    + main(args : String[]) : void
+}
+
+object "<u>Nina:Ship</u>" as Ship {
+    shipName = "Nina"
+    shipYearBuilt = "1492"
+}
+
+object "<u>Pinta:CargoShip</u>" as CargoShip {
+    shipName = "Pinta"
+    shipYearBuilt = "1495"
+    cargoCapacityTonnage = "550000"
+    }
+
+object "<u>SantaMaria:CruiseShip</u>" as CruiseShip {
+    shipName = "Santa Maria"
+    shipYearBuilt = "1455"
+    maximumPassengers = "20000"
+}
+
+PolymorphismDriver --> Ship : instantiates
+PolymorphismDriver --> CargoShip : instantiates
+PolymorphismDriver --> CruiseShip : instantiates
+@enduml 
+

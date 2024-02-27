@@ -1,0 +1,30 @@
+@startuml ObjectDiagramOneAggregation
+
+class AggregationDriver {
+    + main(args : String[]) : void
+}
+
+object "<u>CS5800AdvancedSoftwareEngineering:Course</u>" as Course {
+    courseName = "CS 5800 Advanced Software Engineering"
+    instructor = instructor : Instructor 
+    textbook = textbook : Textbook
+}
+
+object "<u>Instructor:Instructor</u>" as Instructor {
+    name = "Instructor" 
+    firstName = "Nima" 
+    lastname = "Davarpanah" 
+    officeNumber = "3-2636"
+}
+
+object "<u>Textbook:Textbook</u>" as Textbook {
+    name = "Textbook"
+    title = "Clean Code"
+    author = "Robert C Martin"
+    publisher = "Prentice Hall"
+}
+
+Course --o Textbook : instantiates
+Course --o Instructor : instantiates
+
+@enduml 

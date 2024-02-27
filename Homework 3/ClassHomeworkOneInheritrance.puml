@@ -1,0 +1,57 @@
+@startuml classDiagramInheritance
+
+class BaseEmployee {
+    - baseSalary : int 
+
+    + BaseEmployee(firstName : String, lastName : String, SSN : String, baseSalary: int)
+    + getBaseSalary() : int  
+}
+
+class CommissionEmployee {
+    - commissionRate : int
+    - grossSales : int
+
+    + CommissionEmployee(firstName : String, lastName : String, SSN : String, commissionRate : int, grossSales : int)
+    + getcommissionRate() : int
+    + getgrossSales() : int
+}
+
+class Employee {
+    - firstName : String
+    - lastName : String
+    - SSN : String
+
+    + Employee(firstName: String, lastName : String, SSN : String)
+    + getfirstName() : String
+    + getlastName() : String
+    + getSSN() : String
+}
+
+class HourlyEmployee {
+    - wage : int
+    - numberOfHoursWorked : int
+
+    + HourlyEmployee(firstName : String, lastName: String, SSN : String, wage : int, numberOfHoursWorked : int)
+    + getwage() : int
+    + getnumberOfHoursWorked() : int 
+}
+
+class SalariedEmployee {
+    - weeklySalary : int
+
+    + SalariedEmployee(firstName : String, lastName : String, SSN : String, weeklySalary : int)
+    + getweeklySalary() : int 
+    }
+
+class InheritanceDriver {
+    
+}
+
+Employee <|-- CommissionEmployee
+Employee <|-- BaseEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- SalariedEmployee
+@enduml 
+
+
+

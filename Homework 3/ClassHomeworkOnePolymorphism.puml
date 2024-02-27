@@ -1,0 +1,39 @@
+@startuml classDiagramPolymoprhism 
+
+class CargoShip {
+    - cargoCapacityTonnage : int
+
+    + CargoShip(shipName : String, shipBuiltYear : String, cargoCapacityTonnage : int)
+    + setcargoCapacityTonnage(cargoCapacityTonnage : int) : void
+    + getcargoCapacityTonnage() : int
+    + printShip() : void 
+}
+
+class CruiseShip {
+    - maximumPassengers : int 
+
+    + CruiseShip(shipName : String, shipBuiltYear : String, maximumPassengers : int)
+    + setmaximumPassengers(maximumPassengers : int) : void
+    + getmaximumPassengers() : int
+    + printShip() : void 
+}
+
+class Ship {
+    - shipName : String
+    - shipBuiltYear : String
+
+    + Ship(shipName : String, shipBuiltYear : String)
+    + getshipName() : String
+    + getshipBuiltYear() : String
+    + setshipName(shipName : String) : void
+    + setshipBuiltYear(shipBuiltYear : String) : void 
+    + printShip() : void
+}
+
+class PolymorphismDriver {
+
+}
+
+Ship <|-- CargoShip
+Ship <|-- CruiseShip
+@enduml

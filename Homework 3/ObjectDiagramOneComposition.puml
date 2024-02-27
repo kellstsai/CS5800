@@ -1,0 +1,77 @@
+@startuml ObjectDiagramOneComposition
+
+class CompositionDriver{
+    + main(args : String[]) : void
+}
+
+object "<u>php_demo1:Folder</u>" as root {
+    folderName = "php_demo1"
+    subFolders = "Source Files"
+    subFolders = "Include Path"
+    subFolders = "Remote Files" 
+    fileName = " "
+}
+
+object "<u>SourceFile:Folder</u>" as sourcefile {
+    folderName = "Source Files"
+    subFolders = ".phalcon"
+    subFolders = "cache"
+    subFolders = "public"
+    fileName = " "
+}
+
+object "<u>.phalcon:Folder</u>" as phalcon {
+    folderName = ".phalcon"
+    subFolders = " "
+    fileName = " "
+}
+
+object "<u>cache:Folder</u>" as cache {
+    folderName = "cache"
+    subFolders = " "
+    fileName = " "
+}
+
+object "<u>public:Folder</u>" as public {
+    folderName = "public"
+    subFolders = " "
+    fileName = "htcaccess"
+    fileName = "htrouter" 
+    fileName = "index"
+}
+
+object "<u>htcaccess:File</u>" as htcaccess {
+    fileName = "htcaccess"
+}
+
+object "<u>htrouter:File</u>" as htrouter {
+    fileName = "htrouter"
+}
+
+object "<u>index:Index</u>" as index {
+    fileName = "index"
+}
+
+object "<u>IncludePath:Folder</u>" as IncludePath {
+    folderName = "Include Path"
+    subFolders = " "
+    fileName = " "
+}
+
+object "<u>cache:RemoteFiles</u>" as RemoteFiles {
+    folderName = "Remote Files"
+    subFolders = " "
+    fileName = " "
+}
+
+root *-- sourcefile 
+root *-- IncludePath
+root *-- RemoteFiles
+sourcefile *-- phalcon
+sourcefile *-- cache
+sourcefile *-- public
+public *-- htcaccess
+public *-- htrouter
+public *-- index
+@enduml 
+
